@@ -1,6 +1,6 @@
 # Vue.js Project Ideas
 
-## 1. Simple Counter App
+## 1. Simple Counter App ✅
 
 **Skills**: Basic Vue concepts like data binding, methods, and event handling.
 
