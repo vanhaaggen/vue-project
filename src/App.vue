@@ -4,55 +4,61 @@ import Header from './components/Header.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <Header msg="Vue projects" />
-
-      <nav>
+  <div id="aside">
+    <header>
+      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+      <Header msg="vue projects" />
+    </header>
+    <div>
+      <nav class="wrapper">
         <RouterLink to="/counter">Counter</RouterLink>
+        <RouterLink to="/to-do-list">To-Do List</RouterLink>
       </nav>
     </div>
-  </header>
+  </div>
 
-  <RouterView />
+  <div class="router-wrapper">
+    <RouterView />
+  </div>
 </template>
 
-<style scoped>
+<style>
+body {
+  color: #171717;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+#app {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+#aside {
+  width: 250px;
+  height: 100vh;
+  border-right: 1px solid #171717;
+  padding: 1rem;
+}
+
 header {
-  line-height: 1.5;
-  max-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 3rem;
 }
 
 .logo {
   width: 50px;
-  display: block;
-  margin: 0 auto 2rem;
+  height: auto;
 }
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.wrapper {
+  display: flex;
+  flex-direction: column;
 }
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
+.router-wrapper {
+  padding-left: 5rem;
 }
 </style>

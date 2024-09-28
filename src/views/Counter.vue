@@ -40,11 +40,11 @@ button {
   width: auto;
   overflow: visible;
   background: transparent;
+  cursor: pointer;
   &::-moz-focus-inner {
     border: 0;
     padding: 0;
   }
-  cursor: pointer;
 }
 
 .count-wrapper {
